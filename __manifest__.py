@@ -5,7 +5,7 @@
 {
     'name': 'hr_timesheet_outsourcing',
     'version': '1.0',
-    'depends': ['hr', 'analytic', 'outsourcing', 'uom'],
+    'depends': ['analytic', 'outsourcing'],
     'data': [
         'security/ir.model.access.csv',
         'views/outsourcing_views.xml',
