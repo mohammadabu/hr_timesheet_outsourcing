@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <!-- <record id="act_hr_timesheet_line_by_outsourcing" model="ir.actions.act_window">
-            <field name="name">Activities</field>
-            <field name="res_model">account.analytic.line</field>
-            <field name="view_mode">tree,form</field>
-            <field name="view_id" ref="timesheet_view_tree_user"/>
-            <field name="domain">[('outsourcing_id', '!=', False)]</field>
-            <field name="context">{"default_outsourcing_id": active_id, "search_default_outsourcing_id": [active_id]}</field>
-            <field name="search_view_id" ref="hr_timesheet_line_search"/>
-            <field name="help" type="html">
-              <p class="o_view_nocontent_smiling_face">
-                Record a new activity
-              </p><p>
-                You can register and track your workings hours by outsourcing every
-                day. Every time spent on a outsourcing will become a cost and can be re-invoiced to
-                customers if required.
-              </p>
-            </field>
-        </record> -->
-
+        
         <record id="outsourcing_outsourcing_view_form_simplified_inherit_timesheet" model="ir.ui.view">
             <field name="name">outsourcing.outsourcing.view.form.simplified.inherit.timesheet</field>
             <field name="model">outsourcing.outsourcing</field>
@@ -38,9 +20,6 @@
             <field name="inherit_id" ref="outsourcing.edit_outsourcing"/>
             <field name="priority">24</field>
             <field name="arch" type="xml">
-                <!-- <div name="button_box" position="inside">
-                    <button class="oe_stat_button" name="%(act_hr_timesheet_line_by_outsourcing)d" type="action" icon="fa-calendar" string="Timesheets" attrs="{'invisible': [('allow_timesheets', '=', False)]}" groups="hr_timesheet.group_hr_timesheet_user"/>
-                </div> -->
                 <xpath expr="//div[@id='rating_settings']/.." position="before">
                     <div class="row mt16 o_settings_container">
                         <div class="col-lg-6 o_setting_box"  id="timesheet_settings">
@@ -179,13 +158,7 @@
                 <field name="partner_id" position="after">
                     <field name="allow_timesheets" invisible="1"/>
                 </field>
-                <!-- <xpath expr="//div[hasclass('o_outsourcing_kanban_boxes')]" position="inside">
-                    <a t-if="record.allow_timesheets.raw_value" class="o_outsourcing_kanban_box o_outsourcing_timesheet_box" name="%(act_hr_timesheet_line_by_outsourcing)d" type="action" groups="hr_timesheet.group_hr_timesheet_user">
-                        <div>
-                            <span class="o_label">Timesheets</span>
-                        </div>
-                    </a>
-                </xpath> -->
+                
                 <xpath expr="//a[@name='action_view_account_analytic_line']" position="attributes">
                     <attribute name="t-if">record.analytic_account_id.raw_value and !record.allow_timesheets.raw_value</attribute>
                 </xpath>
