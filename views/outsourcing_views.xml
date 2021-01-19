@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <record id="act_hr_timesheet_line_by_outsourcing" model="ir.actions.act_window">
+        <!-- <record id="act_hr_timesheet_line_by_outsourcing" model="ir.actions.act_window">
             <field name="name">Activities</field>
             <field name="res_model">account.analytic.line</field>
             <field name="view_mode">tree,form</field>
@@ -18,7 +18,7 @@
                 customers if required.
               </p>
             </field>
-        </record>
+        </record> -->
 
         <record id="outsourcing_outsourcing_view_form_simplified_inherit_timesheet" model="ir.ui.view">
             <field name="name">outsourcing.outsourcing.view.form.simplified.inherit.timesheet</field>
@@ -38,9 +38,9 @@
             <field name="inherit_id" ref="outsourcing.edit_outsourcing"/>
             <field name="priority">24</field>
             <field name="arch" type="xml">
-                <div name="button_box" position="inside">
+                <!-- <div name="button_box" position="inside">
                     <button class="oe_stat_button" name="%(act_hr_timesheet_line_by_outsourcing)d" type="action" icon="fa-calendar" string="Timesheets" attrs="{'invisible': [('allow_timesheets', '=', False)]}" groups="hr_timesheet.group_hr_timesheet_user"/>
-                </div>
+                </div> -->
                 <xpath expr="//div[@id='rating_settings']/.." position="before">
                     <div class="row mt16 o_settings_container">
                         <div class="col-lg-6 o_setting_box"  id="timesheet_settings">
