@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <!-- <record id="act_hr_timesheet_line_by_outsourcing" model="ir.actions.act_window">
+        <record id="act_hr_timesheet_line_by_outsourcing" model="ir.actions.act_window">
             <field name="name">Activities</field>
             <field name="res_model">account.analytic.line</field>
             <field name="view_mode">tree,form</field>
@@ -18,7 +18,7 @@
                 customers if required.
               </p>
             </field>
-        </record> -->
+        </record>
 
         <record id="outsourcing_outsourcing_view_form_simplified_inherit_timesheet" model="ir.ui.view">
             <field name="name">outsourcing.outsourcing.view.form.simplified.inherit.timesheet</field>
